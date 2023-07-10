@@ -19,43 +19,34 @@ minetest.register_node("cherry:cherry_leaves", {
 
 		minetest.get_node_timer(pos):start(5) 
 	end,
-
-	on_particle_leaves = function(pos)
-		local particle_texture = "cherry_leaves_particul.png"
-		local particle_count = 3
-		local particle_time = 5 
-
-		minetest.add_particlespawner({
-			amount = particle_count,
-			time = particle_time,
-			minpos = {x = pos.x, y = pos.y, z = pos.z},
-			maxpos = {x = pos.x, y = pos.y, z = pos.z},
-			minvel = {x = -0.5, y = -0.5, z = -0.5}, -- Réduire la vitesse de chute en ajustant les valeurs ici
-			maxvel = {x = 0.5, y = -1, z = 0.5}, -- Réduire la vitesse de chute en ajustant les valeurs ici
-			minacc = {x = 0, y = -9, z = 0},
-			maxacc = {x = 0, y = -9, z = 0},
-			minexptime = 1,
-			maxexptime = 1,
-			minsize = 1.2,
-			maxsize = 2,
-			texture = particle_texture,
-			collisiondetection = true,
-			vertical = false,
-			glow = 14
-		})
-	end,
 })
 
 
 minetest.register_abm({
+	label = "Cherry tree petals",
 	nodenames = {"cherry:cherry_leaves"},
-	interval = 10,
-	chance = 0.8,
+	interval = 6,
+	chance = 24,
+	catch_up = false,
 	action = function(pos)
-		local node = minetest.get_node(pos)
-		if node and node.name == "cherry:cherry_leaves" then
-			minetest.registered_nodes["cherry:cherry_leaves"].on_particle_leaves(pos)
-		end
+		minetest.add_particlespawner({
+			amount = 1,
+			time = 1,
+			minpos = {x = pos.x, y = pos.y, z = pos.z},
+			maxpos = {x = pos.x, y = pos.y, z = pos.z},
+			minvel = {x = -0.75, y = -0.4, z = -0.75},
+			maxvel = {x = 0.75, y = -0.2, z = 0.75},
+			minacc = {x = -0.2, y = -0.4, z = -0.2},
+			maxacc = {x = 0.2, y = -0.1, z = 0.2},
+			minexptime = 8,
+			maxexptime = 10,
+			minsize = 1.5,
+			maxsize = 1.75,
+			texture = "cherry_leaves_particul.png",
+			collisiondetection = true,
+			collision_removal = true,
+			vertical = false,
+		})
 	end,
 })
 
