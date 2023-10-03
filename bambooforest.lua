@@ -482,7 +482,7 @@ minetest.register_node("variety:bambooforest_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:bambooforest_sapling"}, rarity = 20},
+			{items = {"variety:bamboo_sapling"}, rarity = 20},
 			{items = {"variety:bambooforest_leaves"}}
 		}
 	},
