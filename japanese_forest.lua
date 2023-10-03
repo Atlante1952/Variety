@@ -366,9 +366,9 @@ doors.register("japanese_door", {
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
-			{"bambooforest:fiber_bamboo", "variety:japanese_wood"},
-			{"variety:japanese_wood", "bambooforest:fiber_bamboo"},
-			{"bambooforest:fiber_bamboo", "variety:japanese_wood"},
+			{"variety:fiber_bamboo", "variety:japanese_wood"},
+			{"variety:japanese_wood", "variety:fiber_bamboo"},
+			{"variety:fiber_bamboo", "variety:japanese_wood"},
 		}
 })
 
@@ -380,7 +380,7 @@ xpanes.register_pane("variety:japanese_small_wall_flat", {
 	sounds = default.node_sound_wood_defaults(),
 	groups = {choppy=1, oddly_breakable_by_hand=2, flammable = 3},
 	recipe = {
-		{"bambooforest:fiber_bamboo", "bambooforest:fiber_bamboo", "bambooforest:fiber_bamboo"},
+		{"variety:fiber_bamboo", "variety:fiber_bamboo", "variety:fiber_bamboo"},
 		{"dye:magenta", "variety:japanese_wood", "dye:magenta"},
 	}
 })
