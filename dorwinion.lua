@@ -420,7 +420,7 @@ minetest.register_node("variety:dorwinion_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {""}, rarity = 20},
+			{items = {"variety:dorwinion_sapling"}, rarity = 20},
 			{items = {"variety:dorwinion_leaves"}}
 		}
 	},
