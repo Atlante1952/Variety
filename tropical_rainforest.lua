@@ -208,7 +208,7 @@ minetest.register_node("variety:tropical_leaves_1", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:tropical_sapling"}, rarity = 20},
+			{items = {"variety:tropical_rainforest_sapling"}, rarity = 20},
 			{items = {"variety:tropical_leaves_1"}}
 		}
 	},
@@ -228,7 +228,7 @@ minetest.register_node("variety:tropical_leaves_2", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:tropical_sapling"}, rarity = 20},
+			{items = {"variety:tropical_rainforest_sapling"}, rarity = 20},
 			{items = {"variety:tropical_leaves_2"}}
 		}
 	},
