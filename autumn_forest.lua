@@ -28,7 +28,7 @@ minetest.register_decoration({
         "default:dry_shrub", "flowers:mushroom_brown",
         "variety:autumn_forest_grass_1", "variety:autumn_forest_grass_2",
         "variety:autumn_forest_grass_3", "variety:autumn_forest_grass_4",
-        "variety:autumn_forest_grass_5",
+        "variety:autumn_forest_grass_5", "variety:toadstool",
 	}
 })
 
@@ -287,6 +287,25 @@ doors.register_fencegate("variety:gate_autumn_forest", {
 		material = "variety:autumn_forest_wood",
 		groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
 		sounds = default.node_sound_wood_defaults()
+	})
+
+	minetest.register_node("variety:toadstool", {
+		description = "Toadstool",
+		tiles = {"toadstool.png"},
+		inventory_image = "toadstool.png",
+		wield_image = "toadstool.png",
+		drawtype = "plantlike",
+		paramtype = "light",
+		sunlight_propagates = true,
+		walkable = false,
+		buildable_to = true,
+		groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+		sounds = default.node_sound_leaves_defaults(),
+		on_use = minetest.item_eat(1),
+		selection_box = {
+			type = "fixed",
+			fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+		}
 	})
 
 	minetest.register_node("variety:autumn_forest_grass_1", {
