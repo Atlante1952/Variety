@@ -1,4 +1,39 @@
 ---------------------------------------------
+-------------CRAFTS
+---------------------------------------------
+minetest.register_craft({
+	output = "variety:japanese_trapdoor",
+	recipe = {
+		{"variety:fiber_bamboo", "variety:japanese_wood", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:fiber_bamboo", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:japanese_tatami 2",
+	recipe = {
+		{"farming:string", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:tatami_simple 2",
+	recipe = {
+		{"variety:fiber_bamboo", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:japanese_lamp 2",
+	recipe = {
+		{"variety:fiber_bamboo", "variety:japanese_wood"},
+		{"default:paper", "default:torch"},
+	}
+})
+
+---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
 
