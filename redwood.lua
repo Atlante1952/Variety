@@ -8,6 +8,31 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "variety:fence_rail_redwood_wood 16",
+	recipe = {
+		{"variety:redwood", "variety:redwood", ""},
+		{"", "", ""},
+		{"variety:redwood", "variety:redwood", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:fence_redwood_wood 4",
+	recipe = {
+		{"variety:redwood", "default:stick", "variety:redwood"},
+		{"variety:redwood", "default:stick", "variety:redwood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:gate_redwood_closed",
+	recipe = {
+		{"default:stick", "variety:redwood", "default:stick"},
+		{"default:stick", "variety:redwood", "default:stick"},
+	}
+})
+
 ---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
