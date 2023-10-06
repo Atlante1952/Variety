@@ -472,7 +472,7 @@ minetest.register_node("variety:bamboo", {
 })
 
 minetest.register_node("variety:bambooforest_leaves", {
-	description = "bambooforest Leaves",
+	description = "Bambooforest Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"bambooforest_leaves.png"},
