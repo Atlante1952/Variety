@@ -198,7 +198,7 @@ minetest.register_node("variety:tropical_rainforest_dirt_with_grass", {
 })
 
 minetest.register_node("variety:tropical_leaves_1", {
-	description = "Tropicale Leaves",
+	description = "Tropical Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"tropical_leaves.png"},
@@ -218,7 +218,7 @@ minetest.register_node("variety:tropical_leaves_1", {
 })
 
 minetest.register_node("variety:tropical_leaves_2", {
-	description = "tropicale Leaves",
+	description = "Tropical Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"tropical_leaves_2.png"},
@@ -318,6 +318,9 @@ end
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:tropical_rainforest_sapling", grow_new_tropical_rainforest_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"variety:tropical_rainforest_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:junglegrass"}, {}}
 	})
 end
 
