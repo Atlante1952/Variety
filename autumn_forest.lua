@@ -523,14 +523,14 @@ minetest.register_craftitem("variety:bowl", {
 if minetest.get_modpath("moreblocks") then
 
 	stairsplus:register_all("autumn_forest_wood", "wood", "variety:autumn_forest_wood", {
-		description = "Frost Land Wood",
+		description = "Autumn Forest Wood",
 		tiles = {"autumn_forest_wood.png"},
       	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
 	    sounds = default.node_sound_wood_defaults(),
 	})
 
 	stairsplus:register_all("autumn_forest_tree", "tree", "variety:autumn_forest_tree", {
-		description = "Japanese Tree",
+		description = "Autumn Forest Tree",
 	tiles = {"autumn_forest_tree_top.png", "autumn_forest_tree_top.png",
 		"autumn_forest_tree.png"},
       	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
