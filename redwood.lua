@@ -281,7 +281,7 @@ minetest.register_node("variety:redwood_tree", {
 })
 
 minetest.register_node("variety:redwood", {
-	description = "RedWood",
+	description = "Redwood",
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"redwood.png"},
@@ -367,8 +367,7 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"variety:redwood_sapling", grow_new_redwood_tree, "soil"},
 	})
 	bonemeal:add_deco({
-		{"variety:redwood_dirt_with_grass", {"variety:grass_1", "variety:grass_2", "variety:grass_3", "variety:grass_4", "variety:grass_5",
-		"default:fern_1", "default:fern_2", "default:fern_3", "default:junglegrass", "default:dry_shrub"}, {}}
+		{"variety:redwood_dirt_with_grass", {"variety:grass_1", "variety:grass_2", "variety:grass_3", "variety:grass_4", "variety:grass_5", "default:fern_1", "default:fern_2", "default:fern_3", "default:junglegrass", "default:dry_shrub"}, {}}
 	})
 end
 
@@ -377,20 +376,20 @@ end
 	stairs.register_stair_and_slab("redwood", "variety:redwood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"redwood.png"},
-		"redwood Wood Stair",
-		"redwood Wood Slab",
+		"Redwood Wood Stair",
+		"Redwood Wood Slab",
 		default.node_sound_wood_defaults())
 
 
 doors.register_fencegate("variety:gate_redwood", {
-	description = "redwood Wood Fence Gate",
+	description = "Redwood Wood Fence Gate",
 	texture = "redwood_wood_fence.png",
 	material = "variety:redwood_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 	default.register_fence("variety:fence_redwood_wood", {
-		description = "redwood Wood Fence",
+		description = "Redwood Wood Fence",
 		texture = "redwood_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^redwood_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
@@ -402,7 +401,7 @@ doors.register_fencegate("variety:gate_redwood", {
 	})
 
 	default.register_fence_rail("variety:fence_rail_redwood_wood", {
-		description = "redwood Wood Fence Rail",
+		description = "Redwood Wood Fence Rail",
 		texture = "redwood_wood_fence.png",
 		inventory_image = "default_fence_rail_overlay.png^redwood_wood_fence.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
