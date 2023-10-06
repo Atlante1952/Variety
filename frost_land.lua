@@ -272,7 +272,7 @@ if minetest.get_modpath("moreblocks") then
 	})
 
 	stairsplus:register_all("frost_land_tree", "tree", "variety:frost_land_tree", {
-		description = "Japanese Tree",
+		description = "Frost Land Tree",
 	tiles = {"frost_land_tree_top.png", "frost_land_tree_top.png",
 		"frost_land_tree.png"},
       	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
