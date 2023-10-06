@@ -442,7 +442,7 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"variety:autumn_forest_sapling", grow_new_autumn_forest_tree, "soil"},
 	})
 	bonemeal:add_deco({
-		{"varietyy:autumn_forest_grass", {"variety:autumn_forest_grass_1", "variety:autumn_forest_grass_2",
+		{"variety:autumn_forest_grass", {"variety:autumn_forest_grass_1", "variety:autumn_forest_grass_2",
         "variety:autumn_forest_grass_3", "variety:autumn_forest_grass_4",
         "variety:autumn_forest_grass_5"}, {}}
 	})
