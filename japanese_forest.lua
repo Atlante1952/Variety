@@ -257,7 +257,7 @@ if minetest.get_modpath("moreblocks") then
 	})
 
 	stairsplus:register_all("japanese_tree", "wood", "variety:japanese_tree", {
-		description = "japanese Tree",
+		description = "Japanese Tree",
 	tiles = {"japanese_tree_top.png", "japanese_tree_top.png",
 		"japanese_tree.png"},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
