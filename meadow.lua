@@ -251,7 +251,7 @@ local function grow_new_meadow_tree(pos)
 
 	minetest.remove_node(pos)
 
-	local random_tree = "tree_" .. math.random(1, 2) .. ".mts"
+	local random_tree = "meadow_tree_" .. math.random(1, 2) .. ".mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
 end
 
