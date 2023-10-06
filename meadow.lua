@@ -261,8 +261,7 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"variety:meadow_sapling", grow_new_meadow_tree, "soil"},
 	})
 	bonemeal:add_deco({
-		{"variety:meadow_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5",
-		"flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:chrysanthemum_green"}, {}}
+		{"variety:meadow_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:chrysanthemum_green"}, {}}
 	})
 end
 	default.register_leafdecay({
@@ -356,14 +355,14 @@ minetest.register_craft({
 if minetest.get_modpath("moreblocks") then
 
 	stairsplus:register_all("meadow_tree", "wood", "variety:meadow_tree", {
-		description = "meadow Tree",
+		description = "Meadow Tree",
 	tiles = {"meadow_tree.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("meadow", "wood", "variety:meadow_wood", {
-		description = "meadow wood",
+		description = "Meadow Wood",
 	tiles = {"meadow_wood.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
