@@ -157,13 +157,13 @@ minetest.register_decoration({
 	stairs.register_stair_and_slab("autumn_forest_wood", "variety:autumn_forest_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"autumn_forest_wood.png"},
-		"autumn_forest Wood Stair",
-		"autumn_forest Wood Slab",
+		"Autumn Forest Wood Stair",
+		"Autumn Forest Wood Slab",
 		default.node_sound_wood_defaults())
 
 
 minetest.register_node("variety:autumn_forest_grass", {
-	description = "autumn_forest Grass",
+	description = "Autumn Forest Grass",
 	tiles = {"autumn_forest_grass.png", "default_dirt.png",
 		{name = "default_dirt.png^autumn_forest_grass_side.png",
 			tileable_vertical = false}},
@@ -175,7 +175,7 @@ minetest.register_node("variety:autumn_forest_grass", {
 })
 
 minetest.register_node("variety:autumn_forest_leaves", {
-	description = "autumn_forest Leaves",
+	description = "Autumn Forest Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"autumn_forest_leaves.png"},
@@ -195,7 +195,7 @@ minetest.register_node("variety:autumn_forest_leaves", {
 })
 
 minetest.register_node("variety:autumn_forest_leaves_2", {
-	description = "autumn_forest Leaves",
+	description = "Autumn Forest Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"autumn_forest_leaves_2.png"},
@@ -215,7 +215,7 @@ minetest.register_node("variety:autumn_forest_leaves_2", {
 })
 
 minetest.register_node("variety:autumn_forest_leaves_3", {
-	description = "autumn_forest Leaves",
+	description = "Autumn Forest Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"autumn_forest_leaves_3.png"},
@@ -235,7 +235,7 @@ minetest.register_node("variety:autumn_forest_leaves_3", {
 })
 
 minetest.register_node("variety:autumn_forest_tree", {
-	description = "autumn_forests Tree",
+	description = "Autumn Forest Tree",
 	tiles = {"autumn_forest_tree_top.png", "autumn_forest_tree_top.png",
 		"autumn_forest_tree.png"},
 	paramtype2 = "facedir",
@@ -248,7 +248,7 @@ minetest.register_node("variety:autumn_forest_tree", {
 
 
 minetest.register_node("variety:autumn_forest_wood", {
-	description = "autumn_forests Tree",
+	description = "Autumn Forest Wood",
 	tiles = {"autumn_forest_wood.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -259,14 +259,14 @@ minetest.register_node("variety:autumn_forest_wood", {
 })
 
 doors.register_fencegate("variety:gate_autumn_forest", {
-	description = "autumn_forests Wood Fence Gate",
+	description = "Autumn Forest Wood Fence Gate",
 	texture = "autumn_forest_wood_fence.png",
 	material = "variety:autumn_forest_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 	default.register_fence("variety:fence_autumn_forest_wood", {
-		description = "autumn_forests Wood Fence",
+		description = "Autumn Forest Wood Fence",
 		texture = "autumn_forest_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^autumn_forest_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
@@ -278,7 +278,7 @@ doors.register_fencegate("variety:gate_autumn_forest", {
 	})
 
 	default.register_fence_rail("variety:fence_rail_autumn_forest_wood", {
-		description = "autumn_forests Wood Fence Rail",
+		description = "Autumn Forest Wood Fence Rail",
 		texture = "autumn_forest_wood_fence.png",
 		inventory_image = "default_fence_rail_overlay.png^autumn_forest_wood_fence.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
@@ -309,7 +309,7 @@ doors.register_fencegate("variety:gate_autumn_forest", {
 	})
 
 	minetest.register_node("variety:autumn_forest_grass_1", {
-		description = "autumn_forest Grass",
+		description = "Autumn Forest Grass",
 		drawtype = "plantlike",
 		waving = 1,
 		tiles = {"autumn_forest_grass_1.png"},
@@ -342,7 +342,7 @@ doors.register_fencegate("variety:gate_autumn_forest", {
 
 for i = 2, 5 do
 	minetest.register_node("variety:autumn_forest_grass_" .. i, {
-		description = "autumn_forest Grass",
+		description = "Autumn Forest Grass",
 		drawtype = "plantlike",
 		waving = 1,
 		tiles = {"autumn_forest_grass_" .. i .. ".png"},
@@ -439,7 +439,12 @@ end
 
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
-		{"cherry:autumn_forest_sapling", grow_new_autumn_forest_tree, "soil"},
+		{"variety:autumn_forest_sapling", grow_new_autumn_forest_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"varietyy:autumn_forest_grass", {"variety:autumn_forest_grass_1", "variety:autumn_forest_grass_2",
+        "variety:autumn_forest_grass_3", "variety:autumn_forest_grass_4",
+        "variety:autumn_forest_grass_5"}, {}}
 	})
 end
 	default.register_leafdecay({
