@@ -433,7 +433,7 @@ local function grow_new_autumn_forest_tree(pos)
 	minetest.remove_node(pos)
 
 	local random_tree = "autumn_forest_tree_" .. math.random(1, 3) .. ".mts"
-	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("autumn_forest") .. "/schematics/" .. random_tree, "0", nil, false)
+	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
 end
 
 
