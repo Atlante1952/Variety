@@ -542,6 +542,8 @@ if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:bamboo_sapling", grow_new_bamboo_tree, "soil"},
 	})
+	bonemeal:add_deco({
+		{"variety:dirt_with_bamboo", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:junglegrass"}, {}}
 end
 
 	default.register_leafdecay({
