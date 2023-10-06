@@ -259,7 +259,7 @@ minetest.register_node("variety:tropical_rainforest_tree", {
 
 
 minetest.register_node("variety:tropical_rainforest_wood", {
-	description = "tropical_rainforest Wood",
+	description = "Tropical Rainforest Wood",
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"tropical_rainforest_wood.png"},
@@ -269,7 +269,7 @@ minetest.register_node("variety:tropical_rainforest_wood", {
 })
 
 minetest.register_node("variety:tropical_rainforest_sapling", {
-	description = "tropical_rainforest Sapling",
+	description = "Tropical Rainforest Sapling",
 	drawtype = "plantlike",
 	tiles = {"tropical_rainforest_trees.png"},
 	inventory_image = "tropical_rainforest_trees.png",
@@ -325,14 +325,14 @@ if minetest.get_modpath("bonemeal") ~= nil then
 end
 
 doors.register_fencegate("variety:gate_tropical_rainforest", {
-	description = "tropical_rainforest Wood Fence Gate",
+	description = "Tropical Rainforest Wood Fence Gate",
 	texture = "tropical_rainforest_wood_fence.png",
 	material = "variety:tropical_rainforest_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 	default.register_fence("variety:fence_tropical_rainforest_wood", {
-		description = "tropical_rainforest Wood Fence",
+		description = "Tropical Rainforest Wood Fence",
 		texture = "tropical_rainforest_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^tropical_rainforest_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
@@ -344,7 +344,7 @@ doors.register_fencegate("variety:gate_tropical_rainforest", {
 	})
 
 	default.register_fence_rail("variety:fence_rail_tropical_rainforest_wood", {
-		description = "tropical_rainforest Wood Fence Rail",
+		description = "Tropical Rainforest Wood Fence Rail",
 		texture = "tropical_rainforest_wood_fence.png",
 		inventory_image = "default_fence_rail_overlay.png^tropical_rainforest_wood_fence.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",
