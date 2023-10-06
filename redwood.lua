@@ -367,8 +367,8 @@ if minetest.get_modpath("bonemeal") ~= nil then
 		{"variety:redwood_sapling", grow_new_redwood_tree, "soil"},
 	})
 	bonemeal:add_deco({
-		{"variety:redwood_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5",
-		"default:fern_1", "default:fern_2", "default:fern_3", "default:junglegrass"}, {}}
+		{"variety:redwood_dirt_with_grass", {"variety:grass_1", "variety:grass_2", "variety:grass_3", "variety:grass_4", "variety:grass_5",
+		"default:fern_1", "default:fern_2", "default:fern_3", "default:junglegrass", "default:dry_shrub"}, {}}
 	})
 end
 
