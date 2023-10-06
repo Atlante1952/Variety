@@ -322,7 +322,8 @@ if minetest.get_modpath("bonemeal") ~= nil then
 	})
 	bonemeal:add_deco({
 		{"variety:cherry_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5",
-		"flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:rose", "flowers:chrysanthemum_green", "flowers:tulip"}, {}},
+		"flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:rose", "flowers:chrysanthemum_green", "flowers:tulip"}, {}}
+	})
 end
 
 minetest.register_node("variety:cherry_leaves_on_the_ground", {
