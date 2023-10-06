@@ -128,7 +128,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "variety:tree_1",
+    name = "variety:redwood_tree_1",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -137,13 +137,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_1.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_1.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_2",
+    name = "variety:redwood_tree_2",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -152,13 +152,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_2.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_2.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_3",
+    name = "variety:redwood_tree_3",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -167,13 +167,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_3.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_3.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_4",
+    name = "variety:redwood_tree_4",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -182,13 +182,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_4.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_4.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_5",
+    name = "variety:redwood_tree_5",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -197,7 +197,7 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_5.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_5.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
@@ -357,7 +357,7 @@ local function grow_new_redwood_tree(pos)
 
 	minetest.remove_node(pos)
 
-	local random_tree = "tree_" .. math.random(1, 5) .. ".mts"
+	local random_tree = "redwood_tree_" .. math.random(1, 5) .. ".mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
 end
 
