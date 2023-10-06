@@ -345,8 +345,8 @@ default.register_leafdecay({
 	stairs.register_stair_and_slab("japanese_wood", "variety:japanese_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"japanese_wood.png"},
-		"japanese Wood Stair",
-		"japanese Wood Slab",
+		"Japanese Wood Stair",
+		"Japanese Wood Slab",
 		default.node_sound_wood_defaults())
 
 
@@ -524,6 +524,9 @@ end
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:japanese_sapling", grow_new_japanese_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"variety:japanese_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5"}, {}}
 	})
 end
 
