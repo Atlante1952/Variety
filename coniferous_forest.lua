@@ -1,4 +1,9 @@
+if minetest.get_modpath("bonemeal") then
 
+bonemeal:add_deco({
+		{"variety:giant_coniferous_forest_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:fern_1", "default:fern_2",	"default:fern_3"}, {}}
+	})
+end
 ---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
@@ -150,8 +155,7 @@ minetest.register_decoration({
 	biomes = {"giant_coniferous_forest"},
 	decoration = {
 		"default:fern_1", "default:fern_3",
-		"default:fern_2", "default:fern_4",
-		"default:fern_5",
+		"default:fern_2",
 	}
 })
 
@@ -275,7 +279,7 @@ minetest.register_decoration({
 -------------BLOCKS
 ---------------------------------------------
 minetest.register_node("variety:giant_coniferous_forest_dirt_with_grass", {
-	description = "giant_coniferous_forest Dirt With Grass",
+	description = "Giant Coniferous Forest Dirt With Grass",
 	tiles = {"giant_coniferous_forest_grass.png", "default_dirt.png",
 		{name = "default_dirt.png^giant_coniferous_forest_grass_side.png",
 			tileable_vertical = false}},
