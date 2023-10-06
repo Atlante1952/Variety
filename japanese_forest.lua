@@ -28,8 +28,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "variety:japanese_lamp 2",
 	recipe = {
-		{"variety:fiber_bamboo", "variety:japanese_wood"},
-		{"default:paper", "default:torch"},
+		{"variety:fiber_bamboo", "default:torch"},
+		{"variety:japanese_wood", "default:paper"},
 	}
 })
 
