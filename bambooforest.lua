@@ -472,7 +472,7 @@ minetest.register_node("variety:bamboo", {
 })
 
 minetest.register_node("variety:bambooforest_leaves", {
-	description = "bambooforest Leaves",
+	description = "Bambooforest Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"bambooforest_leaves.png"},
@@ -482,7 +482,7 @@ minetest.register_node("variety:bambooforest_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:bambooforest_sapling"}, rarity = 20},
+			{items = {"variety:bamboo_sapling"}, rarity = 20},
 			{items = {"variety:bambooforest_leaves"}}
 		}
 	},
@@ -541,6 +541,9 @@ end
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:bamboo_sapling", grow_new_bamboo_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"variety:dirt_with_bamboo", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:junglegrass"}, {}}
 	})
 end
 

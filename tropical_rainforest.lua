@@ -198,7 +198,7 @@ minetest.register_node("variety:tropical_rainforest_dirt_with_grass", {
 })
 
 minetest.register_node("variety:tropical_leaves_1", {
-	description = "Tropicale Leaves",
+	description = "Tropical Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"tropical_leaves.png"},
@@ -208,7 +208,7 @@ minetest.register_node("variety:tropical_leaves_1", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:tropical_sapling"}, rarity = 20},
+			{items = {"variety:tropical_rainforest_sapling"}, rarity = 20},
 			{items = {"variety:tropical_leaves_1"}}
 		}
 	},
@@ -218,7 +218,7 @@ minetest.register_node("variety:tropical_leaves_1", {
 })
 
 minetest.register_node("variety:tropical_leaves_2", {
-	description = "tropicale Leaves",
+	description = "Tropical Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"tropical_leaves_2.png"},
@@ -228,7 +228,7 @@ minetest.register_node("variety:tropical_leaves_2", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {"variety:tropical_sapling"}, rarity = 20},
+			{items = {"variety:tropical_rainforest_sapling"}, rarity = 20},
 			{items = {"variety:tropical_leaves_2"}}
 		}
 	},
@@ -259,7 +259,7 @@ minetest.register_node("variety:tropical_rainforest_tree", {
 
 
 minetest.register_node("variety:tropical_rainforest_wood", {
-	description = "tropical_rainforest Wood",
+	description = "Tropical Rainforest Wood",
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"tropical_rainforest_wood.png"},
@@ -269,7 +269,7 @@ minetest.register_node("variety:tropical_rainforest_wood", {
 })
 
 minetest.register_node("variety:tropical_rainforest_sapling", {
-	description = "tropical_rainforest Sapling",
+	description = "Tropical Rainforest Sapling",
 	drawtype = "plantlike",
 	tiles = {"tropical_rainforest_trees.png"},
 	inventory_image = "tropical_rainforest_trees.png",
@@ -319,17 +319,21 @@ if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:tropical_rainforest_sapling", grow_new_tropical_rainforest_tree, "soil"},
 	})
+	bonemeal:add_deco({
+		{"variety:tropical_rainforest_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3",
+		 "default:grass_4", "default:grass_5", "default:junglegrass"}, {}}
+	})
 end
 
 doors.register_fencegate("variety:gate_tropical_rainforest", {
-	description = "tropical_rainforest Wood Fence Gate",
+	description = "Tropical Rainforest Wood Fence Gate",
 	texture = "tropical_rainforest_wood_fence.png",
 	material = "variety:tropical_rainforest_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 	default.register_fence("variety:fence_tropical_rainforest_wood", {
-		description = "tropical_rainforest Wood Fence",
+		description = "Tropical Rainforest Wood Fence",
 		texture = "tropical_rainforest_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^tropical_rainforest_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
@@ -341,7 +345,7 @@ doors.register_fencegate("variety:gate_tropical_rainforest", {
 	})
 
 	default.register_fence_rail("variety:fence_rail_tropical_rainforest_wood", {
-		description = "tropical_rainforest Wood Fence Rail",
+		description = "Tropical Rainforest Wood Fence Rail",
 		texture = "tropical_rainforest_wood_fence.png",
 		inventory_image = "default_fence_rail_overlay.png^tropical_rainforest_wood_fence.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",

@@ -8,6 +8,31 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "variety:fence_rail_redwood_wood 16",
+	recipe = {
+		{"variety:redwood", "variety:redwood", ""},
+		{"", "", ""},
+		{"variety:redwood", "variety:redwood", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:fence_redwood_wood 4",
+	recipe = {
+		{"variety:redwood", "default:stick", "variety:redwood"},
+		{"variety:redwood", "default:stick", "variety:redwood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:gate_redwood_closed",
+	recipe = {
+		{"default:stick", "variety:redwood", "default:stick"},
+		{"default:stick", "variety:redwood", "default:stick"},
+	}
+})
+
 ---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
@@ -103,7 +128,7 @@ minetest.register_decoration({
 })
 
 minetest.register_decoration({
-    name = "variety:tree_1",
+    name = "variety:redwood_tree_1",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -112,13 +137,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_1.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_1.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_2",
+    name = "variety:redwood_tree_2",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -127,13 +152,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_2.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_2.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_3",
+    name = "variety:redwood_tree_3",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -142,13 +167,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_3.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_3.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_4",
+    name = "variety:redwood_tree_4",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -157,13 +182,13 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_4.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_4.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
 
 minetest.register_decoration({
-    name = "variety:tree_5",
+    name = "variety:redwood_tree_5",
     deco_type = "schematic",
 	place_on = {"variety:redwood_dirt_with_grass"},
     place_offset_y = -2,
@@ -172,7 +197,7 @@ minetest.register_decoration({
     biomes = {"redwood"},
     y_max = 31000,
     y_min = -20,
-    schematic = minetest.get_modpath("variety").."/schematics/tree_5.mts",
+    schematic = minetest.get_modpath("variety").."/schematics/redwood_tree_5.mts",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 })
@@ -256,7 +281,7 @@ minetest.register_node("variety:redwood_tree", {
 })
 
 minetest.register_node("variety:redwood", {
-	description = "RedWood",
+	description = "Redwood",
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {"redwood.png"},
@@ -332,7 +357,7 @@ local function grow_new_redwood_tree(pos)
 
 	minetest.remove_node(pos)
 
-	local random_tree = "tree_" .. math.random(1, 5) .. ".mts"
+	local random_tree = "redwood_tree_" .. math.random(1, 5) .. ".mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
 end
 
@@ -341,6 +366,10 @@ if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:redwood_sapling", grow_new_redwood_tree, "soil"},
 	})
+	bonemeal:add_deco({
+		{"variety:redwood_dirt_with_grass", {"variety:grass_1", "variety:grass_2", "variety:grass_3", "variety:grass_4", "variety:grass_5",
+		 "default:fern_1", "default:fern_2", "default:fern_3", "default:junglegrass", "default:dry_shrub"}, {}}
+	})
 end
 
 
@@ -348,20 +377,20 @@ end
 	stairs.register_stair_and_slab("redwood", "variety:redwood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"redwood.png"},
-		"redwood Wood Stair",
-		"redwood Wood Slab",
+		"Redwood Wood Stair",
+		"Redwood Wood Slab",
 		default.node_sound_wood_defaults())
 
 
 doors.register_fencegate("variety:gate_redwood", {
-	description = "redwood Wood Fence Gate",
+	description = "Redwood Wood Fence Gate",
 	texture = "redwood_wood_fence.png",
 	material = "variety:redwood_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 	default.register_fence("variety:fence_redwood_wood", {
-		description = "redwood Wood Fence",
+		description = "Redwood Wood Fence",
 		texture = "redwood_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^redwood_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",
@@ -373,7 +402,7 @@ doors.register_fencegate("variety:gate_redwood", {
 	})
 
 	default.register_fence_rail("variety:fence_rail_redwood_wood", {
-		description = "redwood Wood Fence Rail",
+		description = "Redwood Wood Fence Rail",
 		texture = "redwood_wood_fence.png",
 		inventory_image = "default_fence_rail_overlay.png^redwood_wood_fence.png^" ..
 					"default_fence_rail_overlay.png^[makealpha:255,126,126",

@@ -320,6 +320,9 @@ if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:cherry_sapling", grow_new_cherry_tree, "soil"},
 	})
+	bonemeal:add_deco({
+		{"variety:cherry_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:rose", "flowers:chrysanthemum_green", "flowers:tulip", "variety:cherry_leaves_on_the_ground"}, {}}
+	})
 end
 
 minetest.register_node("variety:cherry_leaves_on_the_ground", {
@@ -366,7 +369,7 @@ doors.register_fencegate("variety:gate_cherry", {
 })
 
 	default.register_fence("variety:fence_cherry_wood", {
-		description = "cherry Wood Fence",
+		description = "Cherry Wood Fence",
 		texture = "cherry_wood_fence.png",
 		inventory_image = "default_fence_overlay.png^cherry_wood_fence.png^" ..
 					"default_fence_overlay.png^[makealpha:255,126,126",

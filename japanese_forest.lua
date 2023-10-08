@@ -1,4 +1,39 @@
 ---------------------------------------------
+-------------CRAFTS
+---------------------------------------------
+minetest.register_craft({
+	output = "variety:japanese_trapdoor",
+	recipe = {
+		{"variety:fiber_bamboo", "variety:japanese_wood", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:fiber_bamboo", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:japanese_tatami 2",
+	recipe = {
+		{"farming:string", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:tatami_simple 2",
+	recipe = {
+		{"variety:fiber_bamboo", "variety:fiber_bamboo"},
+		{"variety:japanese_wood", "variety:japanese_wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "variety:japanese_lamp 2",
+	recipe = {
+		{"variety:fiber_bamboo", "default:torch"},
+		{"variety:japanese_wood", "default:paper"},
+	}
+})
+
+---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
 
@@ -222,7 +257,7 @@ if minetest.get_modpath("moreblocks") then
 	})
 
 	stairsplus:register_all("japanese_tree", "wood", "variety:japanese_tree", {
-		description = "japanese Tree",
+		description = "Japanese Tree",
 	tiles = {"japanese_tree_top.png", "japanese_tree_top.png",
 		"japanese_tree.png"},
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
@@ -310,8 +345,8 @@ default.register_leafdecay({
 	stairs.register_stair_and_slab("japanese_wood", "variety:japanese_wood",
 		{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		{"japanese_wood.png"},
-		"japanese Wood Stair",
-		"japanese Wood Slab",
+		"Japanese Wood Stair",
+		"Japanese Wood Slab",
 		default.node_sound_wood_defaults())
 
 
@@ -366,9 +401,9 @@ doors.register("japanese_door", {
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
-			{"bambooforest:fiber_bamboo", "variety:japanese_wood"},
-			{"variety:japanese_wood", "bambooforest:fiber_bamboo"},
-			{"bambooforest:fiber_bamboo", "variety:japanese_wood"},
+			{"variety:fiber_bamboo", "variety:japanese_wood"},
+			{"variety:japanese_wood", "variety:fiber_bamboo"},
+			{"variety:fiber_bamboo", "variety:japanese_wood"},
 		}
 })
 
@@ -380,7 +415,7 @@ xpanes.register_pane("variety:japanese_small_wall_flat", {
 	sounds = default.node_sound_wood_defaults(),
 	groups = {choppy=1, oddly_breakable_by_hand=2, flammable = 3},
 	recipe = {
-		{"bambooforest:fiber_bamboo", "bambooforest:fiber_bamboo", "bambooforest:fiber_bamboo"},
+		{"variety:fiber_bamboo", "variety:fiber_bamboo", "variety:fiber_bamboo"},
 		{"dye:magenta", "variety:japanese_wood", "dye:magenta"},
 	}
 })
@@ -489,6 +524,9 @@ end
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:japanese_sapling", grow_new_japanese_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"variety:japanese_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5"}, {}}
 	})
 end
 

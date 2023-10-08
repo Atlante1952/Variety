@@ -251,7 +251,7 @@ local function grow_new_meadow_tree(pos)
 
 	minetest.remove_node(pos)
 
-	local random_tree = "tree_" .. math.random(1, 2) .. ".mts"
+	local random_tree = "meadow_tree_" .. math.random(1, 2) .. ".mts"
 	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
 end
 
@@ -259,6 +259,9 @@ end
 if minetest.get_modpath("bonemeal") ~= nil then
 	bonemeal:add_sapling({
 		{"variety:meadow_sapling", grow_new_meadow_tree, "soil"},
+	})
+	bonemeal:add_deco({
+		{"variety:meadow_dirt_with_grass", {"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "flowers:dandelion_white", "flowers:viola", "flowers:dandelion_yellow", "flowers:chrysanthemum_green"}, {}}
 	})
 end
 	default.register_leafdecay({
@@ -352,14 +355,14 @@ minetest.register_craft({
 if minetest.get_modpath("moreblocks") then
 
 	stairsplus:register_all("meadow_tree", "wood", "variety:meadow_tree", {
-		description = "meadow Tree",
+		description = "Meadow Tree",
 	tiles = {"meadow_tree.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("meadow", "wood", "variety:meadow_wood", {
-		description = "meadow wood",
+		description = "Meadow Wood",
 	tiles = {"meadow_wood.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),

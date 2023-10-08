@@ -184,49 +184,49 @@ minetest.register_decoration({
 if minetest.get_modpath("moreblocks") then
 
 	stairsplus:register_all("terracotta_1", "stone", "variety:terracotta_1", {
-		description = "Clay Tree",
+		description = "Terracotta",
 	tiles = {"terracotta_1.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("terracotta_2", "stone", "variety:terracotta_2", {
-		description = "Clay Block",
+		description = "Terracotta",
 	tiles = {"terracotta_2.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("terracotta_3", "stone", "variety:terracotta_3", {
-		description = "Clay",
+		description = "Terracotta Brick",
 	tiles = {"terracotta_3.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("terracotta_4", "stone", "variety:terracotta_4", {
-		description = "City Clay",
+		description = "Terracotta",
 	tiles = {"terracotta_4.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("terracotta_5", "stone", "variety:terracotta_5", {
-		description = "Small Clay Brick",
+		description = "Terracotta Brick",
 	tiles = {"terracotta_5.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("terracotta_6", "stone", "variety:terracotta_6", {
-		description = "Clay Brick",
+		description = "City Terracotta",
 	tiles = {"terracotta_6.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
 	stairsplus:register_all("clay_1", "stone", "variety:clay_1", {
-		description = "Clay Tree",
+		description = "Clay",
 	tiles = {"clay_1.png"},
 	groups = {cracky = 2, flammable = 2, stone = 1, level = 1},
 	sounds = default.node_sound_stone_defaults(),

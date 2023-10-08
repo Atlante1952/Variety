@@ -1,4 +1,3 @@
-
 ---------------------------------------------
 -------------MAPGENS
 ---------------------------------------------
@@ -420,7 +419,7 @@ minetest.register_node("variety:dorwinion_leaves", {
 	drop = {
 		max_items = 1,
 		items = {
-			{items = {""}, rarity = 20},
+			{items = {"variety:dorwinion_sapling"}, rarity = 20},
 			{items = {"variety:dorwinion_leaves"}}
 		}
 	},
@@ -451,7 +450,7 @@ minetest.register_node("variety:dorwinion_glow_leaves", {
 })
 
 minetest.register_node("variety:dorwinion_sapling", {
-	description = "dorwinion Sapling",
+	description = "Dorwinion Sapling",
 	drawtype = "plantlike",
 	tiles = {"dorwinion_trees.png"},
 	inventory_image = "dorwinion_trees.png",
