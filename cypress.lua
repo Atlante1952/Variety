@@ -192,3 +192,56 @@ minetest.register_node("variety:cypress_leaves_2", {
 		leaves = {"variety:cypress_leaves_1", "variety:cypress_leaves_2"},
 		radius = 3,
 	})
+
+minetest.register_node("variety:cypress_sapling", {
+	description = "Cypress Sapling",
+	drawtype = "plantlike",
+	tiles = {"cypress_sapling.png"},
+	inventory_image = "cypress_sapling.png",
+	wield_image = "cypress_sapling.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	on_timer = grow_new_cypress_tree,
+	selection_box = {
+		type = "fixed",
+		fixed = {-2 / 16, -0.5, -2 / 16, 2 / 16, 5 / 16, 2 / 16}
+	},
+	groups = {snappy = 2, dig_immediate = 3, flammable = 2, attached_node = 1, sapling = 1},
+	sounds = default.node_sound_leaves_defaults(),
+
+	on_construct = function(pos)
+			minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+
+	on_place = function(itemstack, placer, pointed_thing)
+		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
+			"variety:cypress_sapling",
+			{x = -1, y = 0, z = -1}, 
+			{x = 1, y = 3, z = 1},
+			2 
+		)
+
+		return itemstack
+	end,
+})
+
+local function grow_new_cypress_tree(pos)
+	if not default.can_grow(pos) then
+			minetest.get_node_timer(pos):start(math.random(300, 1500))
+		return
+	end
+
+	minetest.remove_node(pos)
+
+	local random_tree = "cypress_tree_" .. math.random(1, 3) .. ".mts"
+	minetest.place_schematic({x = pos.x - 4, y = pos.y, z = pos.z - 4}, minetest.get_modpath("variety") .. "/schematics/" .. random_tree, "0", nil, false)
+end
+
+
+if minetest.get_modpath("bonemeal") ~= nil then
+	bonemeal:add_sapling({
+		{"variety:cypress_sapling", grow_new_cypress_tree, "soil"},
+	})
+end
+
